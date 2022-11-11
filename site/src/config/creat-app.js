@@ -10,3 +10,5 @@ module.exports = function createExpressApp() {
 
     return app;
 };
+
+console.log();
