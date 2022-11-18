@@ -6,48 +6,66 @@
     <body>
         <header> <%- include ("./partials/header.ejs") %> </header>
 
-        <div class="services container-fluid" style="height: 250px">
-            <div class="buttons d-flex justify-content-center align-item-center p-2">
-                <button type="button" class="btn btn-primary btn-lg m-2">Quiero Comprar</button>
-                <button type="button" class="btn btn-primary btn-lg m-2">Quiero Vender</button>
-                <button type="button" class="btn btn-primary btn-lg m-2">Quiero Alquilar</button>
+        <div class=" container-fluid bg-image" style="height: 250px">
+            <div class="buttons p-2 services ">
+                <button type="button" class="btn btn-success btn-nav m-2">Quiero Alquilar</button>
+                <button type="button" class="btn btn-success btn-nav m-2">Quiero Comprar</button>
+                <button type="button" class="btn btn-success btn-nav m-2">Quiero Vender</button>
             </div>
-            
-            <div class="search-bar d-flex justify-content-center align-items-center m-0">
-              <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-    <li><a class="dropdown-item active" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
-  </ul>
-</div>
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">
-    <li><a class="dropdown-item active" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-    <li><hr class="dropdown-divider"></li>
-    <li><a class="dropdown-item" href="#">Separated link</a></li>
-  </ul>
-</div>
 
-                <nav class="navbar navbar-light bg-light">
+            <div class="search-bar d-flex justify-content-center align-items-center  m-0">
+                <div class="dropdown">
+                    <button
+                        class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton2"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Dropdown button
+                    </button>
+                    <ul
+                        class="dropdown-menu dropdown-menu-dark"
+                        aria-labelledby="dropdownMenuButton2"
+                    >
+                        <li><a class="dropdown-item active" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+                <div class="dropdown">
+                    <button
+                        class="btn btn-secondary dropdown-toggle"
+                        type="button"
+                        id="dropdownMenuButton2"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        Dropdown button
+                    </button>
+                    <ul
+                        class="dropdown-menu dropdown-menu-dark"
+                        aria-labelledby="dropdownMenuButton2"
+                    >
+                        <li><a class="dropdown-item active" href="#">Action</a></li>
+                        <li><a class="dropdown-item" href="#">Another action</a></li>
+                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><hr class="dropdown-divider" /></li>
+                        <li><a class="dropdown-item" href="#">Separated link</a></li>
+                    </ul>
+                </div>
+
+                <nav class="navbar navbar-light">
                     <div class="container-fluid">
                         <form class="d-flex">
                             <input
-                                class="form-control me-2"
+                                class="form-control"
                                 type="search"
                                 placeholder="Search"
                                 aria-label="Search"
                             />
-                            <button class="btn btn-outline-success" type="submit">Search</button>
+                            <button class="btn btn-success btn-nav" type="submit">Search</button>
                         </form>
                     </div>
                 </nav>
