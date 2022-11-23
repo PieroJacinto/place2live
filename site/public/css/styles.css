@@ -5,13 +5,13 @@
 }
 .body {
     background: rgb(242, 239, 239);
-        background: linear-gradient(187deg, rgba(242, 239, 239, 1) 0%, rgba(237, 237, 226, 1) 95%);
+    background: linear-gradient(187deg, rgba(242, 239, 239, 1) 0%, rgba(237, 237, 226, 1) 95%);
 }
 .btn-nav {
-    background-color: #4CB27F;
+    background-color: #4cb27f;
 }
 .bg-image {
-    background-size:cover ;
+    background-size: cover;
     background-color: #000;
     background-position: center center;
     background-repeat: no-repeat;
@@ -27,12 +27,11 @@
     margin-left: 5px;
 }
 .card {
-    
     background: rgb(76, 178, 127);
-        background: linear-gradient(129deg, rgba(76, 178, 127, 1) 0%, rgba(208, 236, 223, 1) 62%);
+    background: linear-gradient(129deg, rgba(76, 178, 127, 1) 0%, rgba(208, 236, 223, 1) 62%);
 }
 
-.white{
+.white {
     color: #fff;
 }
 .border-none {
@@ -42,5 +41,4 @@
     font-size: 18px;
     font-weight: bold;
     font-family: sans-serif;
-    
 }
