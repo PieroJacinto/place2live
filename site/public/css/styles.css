@@ -26,7 +26,7 @@
 .ml-1 {
     margin-left: 5px;
 }
-.card {
+.card-home {
     background: rgb(76, 178, 127);
     background: linear-gradient(129deg, rgba(76, 178, 127, 1) 0%, rgba(208, 236, 223, 1) 62%);
 }
