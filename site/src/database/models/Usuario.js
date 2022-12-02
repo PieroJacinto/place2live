@@ -42,17 +42,17 @@ module.exports = (sequelize, DataTypes) => {
         updatedAt: "updated_at",
     };
 
-    const Usuarios = sequelize.define(alias, cols, config);
+    const Usuario = sequelize.define(alias, cols, config);
 
-    /*/Usuarios.associate = (models) => {
-        Usuarios.hasMany(models.inmuebles, {
+    Usuario.associate = (models) => {
+        Usuario.hasMany(models.Inmuebles, {
             as: "inmuebles",
             foreignKey: "propietario",
         });
-        Usuarios.hasMany(models.visitas, {
+        Usuario.hasMany(models.Visitas, {
             as: "visitas",
             foreignKey: "comprador",
         });    
-    };*/
-    return Usuarios;
+    };
+    return Usuario;
 };

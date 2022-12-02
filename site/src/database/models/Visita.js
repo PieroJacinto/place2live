@@ -23,20 +23,20 @@ module.exports = (sequelize, DataTypes) => {
         updatedAt: "updated_at",
     };
 
-    const Visitas = sequelize.define(alias, cols, config);
+    const Visita = sequelize.define(alias, cols, config);
 
     
-   /* Visitas.associate = (models) => {
-        Visitas.belongsTo(models.Usuario, {
+   Visita.associate = (models) => {
+        Visita.belongsTo(models.Usuario, {
             foreignKey: "comprador",
             as: "users",
         });
 
-        Visitas.belongsTo(models.Inmuebles, {
+        Visita.belongsTo(models.Inmuebles, {
             as: "inmuebles",
             foreignKey: "inmueble",
         });
-    };*/
+    };
 
-    return Visitas;
+    return Visita;
 };

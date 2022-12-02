@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true,
             allowNull: false,
-        },
+        },       
         tipo: {
             type: DataTypes.STRING(500),
             allowNull: false,
@@ -64,7 +64,7 @@ module.exports = (sequelize, DataTypes) => {
         estado: {
             type: DataTypes.STRING(500),
             allowNull: false,
-        },          
+        },
     };
     const config = {
         tableName: "inmuebles",
@@ -73,19 +73,19 @@ module.exports = (sequelize, DataTypes) => {
         updatedAt: "updated_at",
     };
 
-    const Inmuebles = sequelize.define(alias, cols, config);
+    const Inmueble = sequelize.define(alias, cols, config);
 
-    /*Inmuebles.associate = (models) => {
-        Inmuebles.belongsTo(models.Usuario, {
+    Inmueble.associate = (models) => {
+        Inmueble.belongsTo(models.Usuario, {
             foreignKey: "propietario",
             as: "usuarios",
         });
         
-        Inmuebles.hasMany(models.visitas, {
+        Inmueble.hasMany(models.Visitas, {
             as: "visitas",
             foreignKey: "inmueble",
         });
-    };*/
+    };
 
-    return Inmuebles;
+    return Inmueble;
 };
