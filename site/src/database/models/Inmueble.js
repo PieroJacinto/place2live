@@ -75,5 +75,17 @@ module.exports = (sequelize, DataTypes) => {
 
     const Inmuebles = sequelize.define(alias, cols, config);
 
+    Inmuebles.associate = (models) => {
+        Inmuebles.belongsTo(models.Usuario, {
+            foreignKey: "propietario",
+            as: "usuarios",
+        });
+        
+        Inmuebles.hasMany(models.visitas, {
+            as: "visitas",
+            foreignKey: "inmueble",
+        });
+    };
+
     return Inmuebles;
 };
