@@ -17,7 +17,7 @@ module.exports = {
             "avatar-wom-3.jpg",
             "avatar-wom-4.jpg",
             "avatar-wom-5.jpg",
-            "avatar-wom-6.jpg",            
+            "avatar-wom-6.jpg",
         ];
         const avatarImg = avatarArray[Math.floor(Math.random() * avatarArray.length)];
         Array(250)
@@ -29,8 +29,7 @@ module.exports = {
                     apellido: faker.name.lastName(),
                     email: faker.internet.email(),
                     telefono: faker.phone.number(),
-                    password: bcryptjs.hashSync("1", 10),
-                    direccion: faker.address.streetAddress(),
+                    password: bcryptjs.hashSync("1", 10),                    
                     localidad: faker.address.city(),
                     avatar: avatarImg,
                     created_at: new Date(),

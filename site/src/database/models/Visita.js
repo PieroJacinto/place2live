@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
 
     
    Visita.associate = (models) => {
-        Visita.belongsTo(models.Usuario, {
+        Visita.belongsTo(models.Usuarios, {
             foreignKey: "comprador",
             as: "users",
         });

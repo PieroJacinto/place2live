@@ -76,7 +76,7 @@ module.exports = (sequelize, DataTypes) => {
     const Inmueble = sequelize.define(alias, cols, config);
 
     Inmueble.associate = (models) => {
-        Inmueble.belongsTo(models.Usuario, {
+        Inmueble.belongsTo(models.Usuarios, {
             foreignKey: "propietario",
             as: "usuarios",
         });
