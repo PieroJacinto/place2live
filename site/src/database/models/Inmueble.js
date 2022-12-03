@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true,
             allowNull: false,
-        },       
+        },
         tipo: {
             type: DataTypes.STRING(500),
             allowNull: false,
@@ -80,9 +80,13 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: "propietario",
             as: "usuarios",
         });
-        
+
         Inmueble.hasMany(models.Visitas, {
             as: "visitas",
+            foreignKey: "inmueble",
+        });
+        Inmueble.hasMany(models.InmuebleImgs, {
+            as: "inmueble_imgs",
             foreignKey: "inmueble",
         });
     };

@@ -19,7 +19,7 @@ module.exports = {
                     key: "id",
                 },
                 allowNull: false,
-            },
+            },            
             tipo: {
                 type: DataTypes.STRING(500),
                 allowNull: false,

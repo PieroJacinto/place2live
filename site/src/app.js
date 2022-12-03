@@ -3,10 +3,15 @@ const express = require("express")
 const createApp = require("./config/create-app");
 const appConfig = require("./config/app-config");
 const path = require ("path")
+const dayjs = require("dayjs");
 
 // CREATE EXPRESS APP
 const app = createApp();
 appConfig.config(app);
+
+app.locals.dateFormat = (date) => {
+    return dayjs(date).format("YYYY-MM-DD");
+};
 
 const methodOverride = require("method-override");
 

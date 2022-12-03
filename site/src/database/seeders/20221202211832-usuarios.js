@@ -19,17 +19,17 @@ module.exports = {
             "avatar-wom-5.jpg",
             "avatar-wom-6.jpg",
         ];
-        const avatarImg = avatarArray[Math.floor(Math.random() * avatarArray.length)];
         Array(250)
-            .fill(0)
-            .forEach((_, i) => {
+        .fill(0)
+        .forEach((_, i) => {
+                const avatarImg = avatarArray[Math.floor(Math.random() * avatarArray.length)];
                 const randomUser = {
                     id: i + 1,
                     nombre: faker.name.firstName(),
                     apellido: faker.name.lastName(),
                     email: faker.internet.email(),
                     telefono: faker.phone.number(),
-                    password: bcryptjs.hashSync("1", 10),                    
+                    password: bcryptjs.hashSync("1", 10),
                     localidad: faker.address.city(),
                     avatar: avatarImg,
                     created_at: new Date(),

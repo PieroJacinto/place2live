@@ -7,6 +7,7 @@ module.exports = (sequelize, DataTypes) => {
             autoIncrement: true,
             allowNull: false,
         },
+        
         fecha: {
             type: DataTypes.DATE,
             allowNull: false,
@@ -14,7 +15,11 @@ module.exports = (sequelize, DataTypes) => {
         hora: {
             type: DataTypes.TIME,
             allowNull: false,
-        },        
+        },
+        estado: {
+            type: DataTypes.STRING(500),
+            allowNull: false,
+        },
     };
     const config = {
         tableName: "visitas",
