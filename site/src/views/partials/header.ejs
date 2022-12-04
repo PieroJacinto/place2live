@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
       <ul class="navbar-nav  mb-2 mb-lg-0 ">
         <li class="nav-item p-2">
-          <button type="button" class="btn btn btn-success btn-nav">Home</button>
+          <a class="btn btn btn-success btn-nav" href="/">Home</a>
         </li>
        <li class="nav-item p-2">
           <button type="button" class="btn btn-success btn-nav">Comprar</button>
@@ -18,11 +18,24 @@
           <button type="button" class="btn btn btn-success btn-nav">Vender</button>
         </li>
         <li class="nav-item p-2">
-          <button type="button" class="btn btn btn-success btn-nav">Alquilar</button>
+          <a" class="btn btn btn-success btn-nav" href="">Alquilar</a>
         </li>
          <li class="nav-item p-2">
-          <button type="button" class="btn btn btn-success btn-nav">Ingresar</button>
+          <a class="btn btn btn-success btn-nav" href="/login">Ingresar</a>
         </li>
+         <li class="nav-item p-2">
+          <a class="btn btn btn-success btn-nav" href="/register">Registrarse</a>
+        </li>
+        <% if (locals.isLogged) { %>
+          <li class="nav-item p-2">
+              <form action="/logout" method="POST">
+                  <button class="btn btn btn-success btn-nav"type="submit">
+                      Salir
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                  </button>
+              </form>
+          </li>
+        <% } %>
       </ul>
     </div>
   </div>

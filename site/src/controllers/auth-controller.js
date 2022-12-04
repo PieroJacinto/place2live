@@ -13,7 +13,7 @@ module.exports = {
             where: {
                 email: req.body.email,
             },
-        });        
+        });
         if (resultValidation.errors.length > 0) {
             return res.render("auth/login", {
                 errors: resultValidation.mapped(),
@@ -24,5 +24,9 @@ module.exports = {
             req.session.userLogged = userToLogin;
             return res.redirect("/");
         }
+    },
+    logout: (req, res) => {
+        req.session.destroy();
+        return res.redirect("/login");
     },
 };
