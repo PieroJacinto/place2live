@@ -1,8 +1,8 @@
 module.exports = {
     login: (req, res) => {
-        res.render("login")
+        res.render("auth/login")
     },
     register: (req, res) => {
-        res.render("register")
+        res.render("auth/register")
     },
 };
