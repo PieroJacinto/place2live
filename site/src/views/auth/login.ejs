@@ -27,13 +27,19 @@
                         <div class="row d-flex justify-content-center">
                             <div class="col-lg-8">
                                 <h2 class=" mb-5">Iniciar sesion</h2>
-                                <form>
+                                <form action="/login" method="POST">
                                     <!-- Email input -->
                                     <div class="form-outline mb-4">
+                                        <span class="error"></span>
+                                            <% if (locals.errors && errors.email) {%>
+                                            <div class="error-msg"><%= errors.email.msg %></div>
+                                        <% } %>
                                         <input
                                             type="email"
                                             id="form3Example3"
                                             class="form-control"
+                                            name="email"
+                                            value="<%= locals.oldData ? oldData.email : null %>"
                                         />
                                         <label class="form-label" for="form3Example3"
                                             >Email address</label
@@ -41,11 +47,16 @@
                                     </div>
 
                                     <!-- Password input -->
-                                    <div class="form-outline mb-4">
+                                    <div class="form-outline mb-4"> 
+                                        <span class="error"></span>
+                                            <% if (locals.errors && errors.password) {%>
+                                            <div class="error-msg"><%= errors.password.msg %></div>
+                                        <% } %>
                                         <input
                                             type="password"
                                             id="form3Example4"
                                             class="form-control"
+                                            name="password"
                                         />
                                         <label class="form-label" for="form3Example4"
                                             >Password</label
@@ -59,7 +70,7 @@
                                         <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
                                         <label class="form-check-label" for="form1Example3"> Remember me </label>
                                         </div>
-                                        <a href="#!">Forgot password?</a>
+                                        <a href="#!">Forgot password?</a>                                        
                                     </div>
 
                                     <!-- Submit button -->

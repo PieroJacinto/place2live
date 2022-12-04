@@ -30,13 +30,17 @@
         <div class="card shadow-2-strong card-registration" style="border-radius: 15px; background-color: white;">
           <div class="card-body p-4 p-md-5">
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Formulario de registro</h3>
-            <form>
+            <form 
+              action="/register"
+              method="POST"
+              enctype="multipart/form-data"
+            >
 
               <div class="row">
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" id="firstName" class="form-control form-control-lg" />
+                    <input type="text" id="firstName" class="form-control form-control-lg" name="nombre" />
                     <label class="form-label" for="firstName">Nombre</label>
                   </div>
 
@@ -44,7 +48,7 @@
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" id="lastName" class="form-control form-control-lg" />
+                    <input type="text" id="lastName" class="form-control form-control-lg" name=apellido/>
                     <label class="form-label" for="lastName">Apellido</label>
                   </div>
 
@@ -74,7 +78,7 @@
                 <div class="col-md-6 mb-4 pb-2">
 
                   <div class="form-outline">
-                    <input type="email" id="emailAddress" class="form-control form-control-lg" />
+                    <input type="email" id="emailAddress" class="form-control form-control-lg" name="email" />
                     <label class="form-label" for="emailAddress">Contraseña</label>
                   </div>
 
@@ -82,7 +86,7 @@
                 <div class="col-md-6 mb-4 pb-2">
 
                   <div class="form-outline">
-                    <input type="tel" id="phoneNumber" class="form-control form-control-lg" />
+                    <input type="tel" id="phoneNumber" class="form-control form-control-lg" name="telefono" />
                     <label class="form-label" for="phoneNumber">Repita contraseña</label>
                   </div>
 
@@ -94,7 +98,7 @@
 
                  <div class="form-group">
     <label for="exampleFormControlSelect1">Localidad</label>
-    <select class="form-control" id="exampleFormControlSelect1">
+    <select class="form-control" id="exampleFormControlSelect1" name="localidad">
       <option>1</option>
       <option>2</option>
       <option>3</option>
