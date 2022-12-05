@@ -32,23 +32,54 @@
             <h3 class="mb-4 pb-2 pb-md-0 mb-md-5">Formulario de registro</h3>
             <form 
               action="/register"
-              method="POST"
-              enctype="multipart/form-data"
+              method="POST"              
             >
               <div class="row">
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" id="nombre" class="form-control form-control-lg" name="nombre" />
-                    <label class="form-label" for="nombre">Nombre</label>
+                    <input 
+                    type="text" 
+                      id="nombre" 
+                      class="form-control form-control-lg <%= 
+                        locals.errors && errors.nombre 
+                        ? 'is-invalid' 
+                        : null 
+                        %>"" 
+                      name="nombre" 
+                      value="<%= locals.oldData ? oldData.nombre : null %>" 
+                      >
+                      <label class="form-label" for="nombre">Nombre</label>
+                      <span class="error"></span>
+                         <% if (locals.errors && errors.nombre) { %>
+                             <div class= "error-msg">
+                                 <%= errors.nombre.msg %>               
+                             </div>
+                         <% } %>                
                   </div>
 
                 </div>
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" id="apellido" class="form-control form-control-lg" name=apellido/>
-                    <label class="form-label" for="apellido">Apellido</label>
+                    <input 
+                    type="text" 
+                    id="apellido" 
+                    class="form-control form-control-lg <%= 
+                        locals.errors && errors.apellido 
+                        ? 'is-invalid' 
+                        : null 
+                        %>" 
+                      value="<%= locals.oldData ? oldData.apellido : null %>"
+                      name=apellido
+                      >
+                      <label class="form-label" for="apellido">Apellido</label>
+                      <span class="error"></span>
+                        <% if (locals.errors && errors.apellido) { %>
+                            <div class= "error-msg">
+                                <%= errors.apellido.msg %>               
+                            </div>
+                        <% } %>
                   </div>
 
                 </div>
@@ -58,15 +89,47 @@
                 <div class="col-md-6 mb-4 ">
 
                   <div class="form-outline datepicker w-100">
-                    <input type="text" class="form-control form-control-lg" id="telefono" />
+                    <input 
+                      type="text" 
+                      class="form-control form-control-lg <%= 
+                        locals.errors && errors.telefono 
+                        ? 'is-invalid' 
+                        : null 
+                        %>" 
+                      value="<%= locals.oldData ? oldData.telefono : null %>"
+                      id="telefono" 
+                      name="telefono"
+                    >
                     <label for="telefono" class="form-label">Telefono</label>
+                    <span class="error"></span>
+                      <% if (locals.errors && errors.telefono) { %>
+                          <div class= "error-msg">
+                              <%= errors.telefono.msg %>               
+                          </div>
+                      <% } %>
                   </div>
 
                 </div>
                 <div class="col-md-6 mb-4">
-                    <div class="form-outline datepicker w-100">
-                    <input type="email" class="form-control form-control-lg" id="email" name="email" />
-                    <label for="email" class="form-label">Email</label>
+                    <div class="form-outline datepicker w-100">                     
+                      <input 
+                        type="email" 
+                        class="form-control form-control-lg <%= 
+                          locals.errors && errors.email 
+                          ? 'is-invalid' 
+                          : null 
+                          %>" 
+                        value="<%= locals.oldData ? oldData.email : null %>" 
+                        id="email" 
+                        name="email" 
+                      >
+                      <label for="email" class="form-label">Email</label>
+                      <span class="error"></span>
+                      <% if (locals.errors && errors.email) { %>
+                          <div class= "error-msg">
+                              <%= errors.email.msg %>               
+                          </div>
+                      <% } %>
                   </div>               
                 </div>
               </div>
@@ -75,18 +138,49 @@
                 <div class="col-md-6 mb-4 pb-2">
 
                   <div class="form-outline">
-                    <input type="password" id="password" class="form-control form-control-lg" name="password" />
+                    <input 
+                      type="password" 
+                      id="password" 
+                      class="form-control form-control-lg <%= 
+                        locals.errors && errors.password 
+                        ? 'is-invalid' 
+                        : null 
+                        %>" 
+                      value="<%= locals.oldData ? oldData.password : null %>" 
+                      name="password" 
+                    >
                     <label class="form-label" for="password">Contraseña</label>
+                    <span class="error"></span>
+                      <% if (locals.errors && errors.password) { %>
+                          <div class= "error-msg">
+                              <%= errors.password.msg %>               
+                          </div>
+                      <% } %>
                   </div>
 
                 </div>
                 <div class="col-md-6 mb-4 pb-2">
 
                   <div class="form-outline">
-                    <input type="password" id="repPassword" class="form-control form-control-lg" name="repPassword" />
+                    <input 
+                      type="password" 
+                      id="repPassword" 
+                      class="form-control form-control-lg <%= 
+                        locals.errors && errors.repPassword 
+                        ? 'is-invalid' 
+                        : null 
+                        %>" 
+                      value="<%= locals.oldData ? oldData.repPassword : null %>" 
+                      name="repPassword" 
+                    >
                     <label class="form-label" for="repPassword">Repita contraseña</label>
+                    <span class="error"></span>
+                      <% if (locals.errors && errors.repPassword) { %>
+                          <div class= "error-msg">
+                              <%= errors.repPassword.msg %>               
+                          </div>
+                      <% } %>
                   </div>
-
                 </div>
               </div>
 

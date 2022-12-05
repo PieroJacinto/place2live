@@ -2,8 +2,7 @@ const { body } = require("express-validator");
 const db = require("../database/models");
 const bcryptjs = require("bcryptjs");
 
-module.exports = {
-    loginValidations: [
+module.exports = [
         body("email")
             .notEmpty()
             .withMessage("Debes completar tu email")
@@ -36,5 +35,5 @@ module.exports = {
                     }
                 }
             }),
-    ],
-};
+    ]
+
