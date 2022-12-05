@@ -35,21 +35,20 @@
               method="POST"
               enctype="multipart/form-data"
             >
-
               <div class="row">
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" id="firstName" class="form-control form-control-lg" name="nombre" />
-                    <label class="form-label" for="firstName">Nombre</label>
+                    <input type="text" id="nombre" class="form-control form-control-lg" name="nombre" />
+                    <label class="form-label" for="nombre">Nombre</label>
                   </div>
 
                 </div>
                 <div class="col-md-6 mb-4">
 
                   <div class="form-outline">
-                    <input type="text" id="lastName" class="form-control form-control-lg" name=apellido/>
-                    <label class="form-label" for="lastName">Apellido</label>
+                    <input type="text" id="apellido" class="form-control form-control-lg" name=apellido/>
+                    <label class="form-label" for="apellido">Apellido</label>
                   </div>
 
                 </div>
@@ -59,18 +58,16 @@
                 <div class="col-md-6 mb-4 ">
 
                   <div class="form-outline datepicker w-100">
-                    <input type="text" class="form-control form-control-lg" id="birthdayDate" />
-                    <label for="birthdayDate" class="form-label">Telefono</label>
+                    <input type="text" class="form-control form-control-lg" id="telefono" />
+                    <label for="telefono" class="form-label">Telefono</label>
                   </div>
 
                 </div>
                 <div class="col-md-6 mb-4">
                     <div class="form-outline datepicker w-100">
-                    <input type="email" class="form-control form-control-lg" id="birthdayDate" />
-                    <label for="birthdayDate" class="form-label">Email</label>
-                  </div>
-                 
-
+                    <input type="email" class="form-control form-control-lg" id="email" name="email" />
+                    <label for="email" class="form-label">Email</label>
+                  </div>               
                 </div>
               </div>
 
@@ -78,16 +75,16 @@
                 <div class="col-md-6 mb-4 pb-2">
 
                   <div class="form-outline">
-                    <input type="email" id="emailAddress" class="form-control form-control-lg" name="email" />
-                    <label class="form-label" for="emailAddress">Contraseña</label>
+                    <input type="password" id="password" class="form-control form-control-lg" name="password" />
+                    <label class="form-label" for="password">Contraseña</label>
                   </div>
 
                 </div>
                 <div class="col-md-6 mb-4 pb-2">
 
                   <div class="form-outline">
-                    <input type="tel" id="phoneNumber" class="form-control form-control-lg" name="telefono" />
-                    <label class="form-label" for="phoneNumber">Repita contraseña</label>
+                    <input type="password" id="repPassword" class="form-control form-control-lg" name="repPassword" />
+                    <label class="form-label" for="repPassword">Repita contraseña</label>
                   </div>
 
                 </div>
@@ -110,7 +107,7 @@
               </div>
 
               <div class="mt-4 pt-2">
-                <input class="btn btn-success btn-lg" type="submit" value="Registrarse" />
+                <input class="btn btn-success btn-lg" type="submit" />
               </div>
 
             </form>
