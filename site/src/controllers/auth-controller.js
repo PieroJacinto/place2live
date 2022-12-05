@@ -29,4 +29,8 @@ module.exports = {
         req.session.destroy();
         return res.redirect("/login");
     },
+    register: (req,res) => {       
+        
+        res.send("el post de register anda")
+    }
 };
