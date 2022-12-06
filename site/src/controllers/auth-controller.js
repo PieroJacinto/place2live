@@ -1,13 +1,20 @@
 const { validationResult } = require("express-validator");
 const db = require("../database/models");
+
+const fetch = require('node-fetch');
 const bcryptjs = require("bcryptjs");
 
 module.exports = {
     viewLogin: (req, res) => {
         res.render("auth/login");
     },
-    viewRegister: (req, res) => {
-        res.render("auth/register");
+    viewRegister: async (req, res) => {
+
+        const provinciasFetch = await fetch("https://apis.datos.gob.ar/georef/api/provincias?campos=id,nombre")
+        const provinciasJSON = await provinciasFetch.json()
+        const provincias = await provinciasJSON.provincias
+
+        res.render("auth/register", { provincias });
     },
     login: async (req, res) => {
         const resultValidation = validationResult(req);
